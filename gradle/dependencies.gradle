@@ -11,9 +11,9 @@ ext {
 
             // Mapbox
             mapboxMapPluginPrefix    : 'v9',
-            mapboxMapSdk             : '9.2.0',
-            mapboxTurf               : '5.1.0',
-            mapboxServices           : '5.1.0',
+            mapboxMapSdk             : '1.0.0',
+            mapboxTurf               : '1.0.0',
+            mapboxServices           : '1.0.0',
             mapboxPluginBuilding     : '0.7.0',
             mapboxPluginPlaces       : '0.12.0',
             mapboxPluginLocalization : '0.12.0',
@@ -77,9 +77,9 @@ ext {
 
     dependenciesList = [
             // Mapbox
-            mapboxMapSdk             : "com.mapbox.mapboxsdk:mapbox-android-sdk:${version.mapboxMapSdk}",
-            mapboxTurf               : "com.mapbox.mapboxsdk:mapbox-sdk-turf:${version.mapboxTurf}",
-            mapboxServices           : "com.mapbox.mapboxsdk:mapbox-sdk-services:${version.mapboxServices}",
+            mapboxMapSdk             : "com.vietmaps.vietmapssdk:vietmaps-android-sdk:${version.mapboxMapSdk}",
+            mapboxTurf               : "com.vietmaps.vietmapssdk:vietmaps-sdk-turf:${version.mapboxTurf}",
+            mapboxServices           : "com.vietmaps.vietmapssdk:vietmaps-sdk-services:${version.mapboxServices}",
 
             // Mapbox plugins
             mapboxPluginBuilding     : "com.mapbox.mapboxsdk:mapbox-android-plugin-building-${version.mapboxMapPluginPrefix}:${version.mapboxPluginBuilding}",

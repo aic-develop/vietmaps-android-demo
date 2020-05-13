@@ -99,6 +99,15 @@ android {
     dexOptions {
         javaMaxHeapSize "4g"
     }
+
+    configurations {
+        all {
+            exclude module: 'mapbox-sdk-services'
+            exclude module: 'mapbox-sdk-geojson'
+            exclude module: 'mapbox-sdk-directions-models'
+            exclude module: 'mapbox-sdk-turf'
+        }
+    }
 }
 
 play {
@@ -137,13 +146,27 @@ dependencies {
     implementation dependenciesList.mapboxServices
 
     // Mapbox plugins
-    implementation dependenciesList.mapboxPluginBuilding
-    implementation dependenciesList.mapboxPluginPlaces
-    implementation dependenciesList.mapboxPluginLocalization
-    implementation dependenciesList.mapboxPluginTraffic
-    implementation dependenciesList.mapboxPluginMarkerView
-    implementation dependenciesList.mapboxPluginAnnotation
-    implementation dependenciesList.mapboxPluginScalebar
+    implementation dependenciesList.mapboxPluginBuilding, {
+        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-android-sdk'
+    }
+    implementation dependenciesList.mapboxPluginPlaces, {
+        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-android-sdk'
+    }
+    implementation dependenciesList.mapboxPluginLocalization, {
+        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-android-sdk'
+    }
+    implementation dependenciesList.mapboxPluginTraffic, {
+        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-android-sdk'
+    }
+    implementation dependenciesList.mapboxPluginMarkerView, {
+        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-android-sdk'
+    }
+    implementation dependenciesList.mapboxPluginAnnotation, {
+        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-android-sdk'
+    }
+    implementation dependenciesList.mapboxPluginScalebar, {
+        exclude group: 'com.mapbox.mapboxsdk', module: 'mapbox-android-sdk'
+    }
 
     // Firebase
     globalImplementation dependenciesList.firebaseCrashlytics
