@@ -33,10 +33,10 @@ allprojects {
         maven { url "https://jitpack.io" }
         maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local/' }
-
-        maven {
-            url 'https://dl.bintray.com/rosaliza/vietmaps'
-        }
+//        maven {
+//            url 'https://dl.bintray.com/rosaliza/vietmaps'
+//        }
+        mavenLocal()
     }
 }
 
